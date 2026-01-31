@@ -1,0 +1,10 @@
+[target.'cfg(all(target_arch = "arm", target_os = "none"))']
+# runner = "probe-rs run --chip RP2040"
+runner = "picotool load -u -v -x -t elf"
+[build]
+target = "thumbv6m-none-eabi" # Cortex-M0 and Cortex-M0+
+
+{% if defmt -%}
+[env]
+DEFMT_LOG = "debug"
+{% endif %}
