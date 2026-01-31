@@ -9,4 +9,4 @@ pre = ["cargo-generate/prehook.rhai"]
 [placeholders.defmt]
 type = "bool"
 prompt = "Enable defmt logging (requires a debug probe)?"
-default = false
+default = true
